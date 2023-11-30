@@ -11,14 +11,18 @@ git clone git@github.com:kakeith/test_appa_gpus.git
 cd test_appa_gpus/
 conda create -y --name testEnv python==3.9
 conda activate testEnv
+pip install numpy==1.26.2
 pip install torch==2.1.1
-pip install numpy==1.26.2 
 ```
 
 ### Running on Appa 
 
-Create a batch job on SLURM and call the following. 
+First, make sure that everything is set-up correctly for your script to run on the CPUs (master node): 
+```
+~/anaconda3/envs/testEnv/bin/python3.9 train_net.py
+```
+
+Then reate a batch job on SLURM and call the following. This will submit the job to the GPUs. 
 ```
 sbatch run.sh 
 ```
-This will send the job to appa's GPUs and call `train_net.py`

@@ -10,4 +10,4 @@
 # Command you want to run on the cluster
 # Notice, you must set-up testEval correctly as a conda virtual environment
 # Calling this full path makes sure you are running the correct package versions
-~/anaconda3/envs/testEval/bin/python train_net.py                
+/home/kkeith/anaconda3/envs/testEnv/bin/python3.9 train_net.py

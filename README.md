@@ -7,6 +7,8 @@ This repo holds a simple feed-forward neural network (in `train_net.py`). It als
 
 On appa, set-up the following virtual environment. 
 ```
+git clone git@github.com:kakeith/test_appa_gpus.git
+cd test_appa_gpus/
 conda create -y --name testEnv python==3.9
 conda activate testEnv
 pip install torch==2.1.1

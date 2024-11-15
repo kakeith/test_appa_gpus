@@ -19,10 +19,20 @@ pip install torch==2.1.1
 
 First, make sure that everything is set-up correctly for your script to run on the CPUs (master node): 
 ```
-~/anaconda3/envs/testEnv/bin/python3.9 train_net.py
+~/anaconda3/envs/testEnv/bin/python3.9 train_net_w_gpus.py
+```
+
+Make sure your `.sh` script works. The common errors are specifying where one should be looking for your `anaconda environment`. 
+```
+./run.sh
 ```
 
 Then reate a batch job on SLURM and call the following. This will submit the job to the GPUs. 
 ```
 sbatch run.sh 
+```
+
+On `gpmoo` cluster (instead of appa), run the following which switches which partition to submit to
+```
+sbatch run_on_gpmoo.sh
 ```

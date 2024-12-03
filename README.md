@@ -19,7 +19,7 @@ pip install torch==2.1.1
 
 First, make sure that everything is set-up correctly for your script to run on the CPUs (master node): 
 ```
-~/anaconda3/envs/testEnv/bin/python3.9 train_net_w_gpus.py
+python3.9 train_net_w_gpus.py
 ```
 
 Make sure your `.sh` script works. The common errors are specifying where one should be looking for your `anaconda environment`. 
